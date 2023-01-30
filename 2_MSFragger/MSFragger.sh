@@ -19,7 +19,7 @@ $philosopherNetworkPath workspace --clean --nocheck
 $philosopherNetworkPath workspace --init --nocheck
 
 #Next, we run MSFRAGGER. change xmx for the GB on your system
-#java -Xmx170G -jar $msfraggerNetworkPath $fraggerParamsNetworkPath $inputdirectory/*.d
+#java -Xmx170G -jar $msfraggerNetworkPath $fraggerParamsNetworkPath $inputdirectory/*.d #changes heapsize for java. system dependent 170 in this case.
 echo $dbsplits
 python3 $msfragDBsplitNetworkPath $dbsplits "java -Xmx360G -jar" $msfraggerNetworkPath $fraggerParamsNetworkPath $inputdirectory/*.d
 
