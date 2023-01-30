@@ -44,7 +44,7 @@ echo "RVSSPLGSTQAATVFLANNDPLSPVTSNGNAPSCGLKLKELYEAHVPKHCQLVKIADEVKFWERKRGINVSDEW
 databaseTemp="database_name = "
 sed -i "1s|.*|$databaseTemp/tmp/fragpipe"$SLURM_JOBID""$SLURM_ARRAY_TASK_ID"/testfasta.fasta|" $fraggerParamsTempPath
 
-#We also want to turn the calibration and optimization off. We try for =2 and =1 
+#We also want to turn the calibration and optimization off. We try for =2 and =1. Optimizes run time by exluding mass optimization for each peptide
 sed -i 's/calibrate_mass = 2/calibrate_mass = 0/g' $fraggerParamsTempPath
 sed -i 's/calibrate_mass = 1/calibrate_mass = 0/g' $fraggerParamsTempPath
 
@@ -58,7 +58,7 @@ Brukernumber=$(find /tmp/timstoffiles"$SLURM_JOBID""$SLURM_ARRAY_TASK_ID"/*.d -m
 mzBINnumber=$(find /tmp/timstoffiles"$SLURM_JOBID""$SLURM_ARRAY_TASK_ID"/*.mzBIN -type f | wc -l)
 
 #if numberOfFilesPerBatch is not equal to number of mzBIN something went wrong and we throw error. Otherwise, the copy the mzBIN files over.
-#If inputNumber and pepXMLNumber are not equal it means all went fine. If not, it should not copy, and echo print that something went wrong.
+#If inputNumber and pepXMLNumber are equal it means all went fine. If not, it should not copy, and echo print that something went wrong.
 if (( $Brukernumber == $mzBINnumber))
 then
 	#Copy mzBIN and .mgf
