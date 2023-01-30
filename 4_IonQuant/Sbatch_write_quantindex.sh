@@ -5,7 +5,7 @@
 #SBATCH --job-name=quantWrite 		#Job name
 #SBATCH --nodes=1			#Number of Nodes needed
 #SBATCH --cpus-per-task=2		#Number of CPUS needed
-#SBATCH --mem=89GB			#Memory needed	
+#SBATCH --mem=89GB			#Memory needed	#data set specific, take largest file mutliple by 8 to give largest memory pool
 
 export LC_ALL=C
 
