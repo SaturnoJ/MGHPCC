@@ -28,8 +28,8 @@ cp -r ${arr[$SLURM_ARRAY_TASK_ID]} /tmp/timstoffiles"$SLURM_JOBID""$SLURM_ARRAY_
 #Copy Msfragger and fragger.params, give chmods
 cp -r $fragpipeDirectory/* /tmp/fragpipe"$SLURM_JOBID""$SLURM_ARRAY_TASK_ID"/
 cp $fraggerParamsNetworkPath /tmp/fragpipe"$SLURM_JOBID""$SLURM_ARRAY_TASK_ID"/
-chmod 777 -R /tmp/fragpipe"$SLURM_JOBID""$SLURM_ARRAY_TASK_ID"/
-chmod u+x /tmp/fragpipe"$SLURM_JOBID""$SLURM_ARRAY_TASK_ID"/tools/philosopher/philosopher
+chmod 777 -R /tmp/fragpipe"$SLURM_JOBID""$SLURM_ARRAY_TASK_ID"/ #give read, write and execute
+chmod u+x /tmp/fragpipe"$SLURM_JOBID""$SLURM_ARRAY_TASK_ID"/tools/philosopher/philosopher #make the file executable for user
 
 #copy the params file and adjust the variable within this script. We want to adjust it to write mzbin
 fraggerParamsTempPath=/tmp/fragpipe"$SLURM_JOBID""$SLURM_ARRAY_TASK_ID"/$(basename ${fraggerParamsNetworkPath})
