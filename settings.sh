@@ -7,17 +7,17 @@
 ####################################################################################################################################
 
 #Specify Container locations
-container="/project/Path-Steen/Patrick/Containers/ubuntu_fragpipe"
-easypqpContainer="/project/Path-Steen/Patrick/Containers/easypqp"
+container="/lab-share/Path-Steen-e2/Public/Jason/Containers/ubuntu_fragpipe"
+easypqpContainer="/lab-share/Path-Steen-e2/Public/Jason/Containers/easypqp"
 
 #specify where the fragpipe directory is, and where each tool is for both on node and on network.
-fragpipeDirectory="/project/Path-Steen/Patrick/Fragpipe/"
+fragpipeDirectory="/lab-share/Path-Steen-e2/Public/Jason/Fragpipe/"
 
 #Specify location and version of the Fragpipe tools.
-msfraggerNetworkPath="/project/Path-Steen/Patrick/Fragpipe/MSFragger-3.4/MSFragger-3.4.jar"
-ionquantNetworkPath="/project/Path-Steen/Patrick/Fragpipe/MSFragger-3.4/IonQuant-1.7.17.jar" 
-philosopherNetworkPath="/project/Path-Steen/Patrick/Fragpipe/tools/philosopher-4.2.1/philosopher"
-msfragDBsplitNetworkPath="/project/Path-Steen/Patrick/Fragpipe/tools/msfragger_pep_split.py"
+msfraggerNetworkPath="/lab-share/Path-Steen-e2/Public/Jason/Fragpipe/MSFragger-3.4/MSFragger-3.4.jar"
+ionquantNetworkPath="/lab-share/Path-Steen-e2/Public/Jason/Fragpipe/MSFragger-3.4/IonQuant-1.7.17.jar" 
+philosopherNetworkPath="/lab-share/Path-Steen-e2/Public/Jason/Fragpipe/tools/philosopher-4.2.1/philosopher"
+msfragDBsplitNetworkPath="/lab-share/Path-Steen-e2/Public/Jason/Fragpipe/tools/msfragger_pep_split.py"
 
 #Specify version of tools. DO NOT CHANGE THE $SLURM_JOBID and $SLURM_ARRAY_TASK_ID part!!
 msfraggerPath="/tmp/fragpipe"$SLURM_JOBID""$SLURM_ARRAY_TASK_ID"/MSFragger-3.4/MSFragger-3.4.jar" 
