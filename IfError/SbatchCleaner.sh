@@ -5,7 +5,7 @@ sbatch -p steen-compute -w "compute-6-0"  -n 1 -c 1  --mem=1MB /lab-share/Path-S
 #Will delete all old stuff everywhere.
 sbatch -p steen-compute -w "compute-6-1"  -n 1 -c 1  --mem=1MB /lab-share/Path-Steen-e2/Public/Jason/MGHPCC/deleteScript.sh
 #Will delete all old stuff everywhere.
-#sbatch -p steen-compute -w "compute-6-2"  -n 1 -c 1  --mem=1MB /lab-share/Path-Steen-e2/Public/Jason/MGHPCC/deleteScript.sh
+sbatch -p steen-compute -w "compute-6-2"  -n 1 -c 1  --mem=1MB /lab-share/Path-Steen-e2/Public/Jason/MGHPCC/deleteScript.sh
 #Will delete all old stuff everywhere.
 sbatch -p steen-compute -w "compute-6-3"  -n 1 -c 1  --mem=1MB /lab-share/Path-Steen-e2/Public/Jason/MGHPCC/deleteScript.sh
 #Will delete all old stuff everywhere.
