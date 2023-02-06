@@ -6,6 +6,7 @@
 #SBATCH --nodes=1			#Number of Nodes needed
 #SBATCH --cpus-per-task=1		#Number of CPUS needed
 #SBATCH --mem=32GB			#Memory needed	
+$SBATCH --qos=steen
 
 export LC_ALL=C
 
