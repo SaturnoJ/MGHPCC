@@ -1,11 +1,12 @@
 #!/bin/bash
-#SBATCH --partition=mghpcc-short #compute # gpu #compute 	#Queue to be used?
-#SBATCH --account=bch-mghpcc		#account name
+#SBATCH --partition=steen-compute 	#Queue to be used?
+#SBATCH --account=steen		#account name
 #SBATCH --time=6:00:00 		#12 hours. Normal search (i.e. tryptic, Oxidation and acetylation) will take +- 2 hours with 30 input files...
 #SBATCH --job-name=quantWrite 		#Job name
 #SBATCH --nodes=1			#Number of Nodes needed
 #SBATCH --cpus-per-task=2		#Number of CPUS needed
 #SBATCH --mem=89GB			#Memory needed	#data set specific, take largest file mutliple by 8 to give largest memory pool
+#SBATCH --qos=steen
 
 export LC_ALL=C
 
